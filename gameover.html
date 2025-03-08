@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Over</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        background-color: #f8d7da;
+      }
+      .container {
+        margin-top: 100px;
+      }
+      h1 {
+        color: red;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Game Over</h1>
+      <p>Your Score: <span id="score">0</span></p>
+      <button onclick="restartGame()">Restart</button>
+    </div>
+
+    <script>
+      document.getElementById("score").innerText =
+        localStorage.getItem("score");
+
+      function restartGame() {
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>
